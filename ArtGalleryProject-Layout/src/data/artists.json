@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Leonardo da Vinci",
+      "color": "#A67B5B",
+      "most_important_piece": "Mona Lisa"
+    },
+    {
+      "name": "Vincent van Gogh",
+      "color": "#F3C24D",
+      "most_important_piece": "Starry Night"
+    },
+    {
+      "name": "Claude Monet",
+      "color": "#6BAFA7",
+      "most_important_piece": "Impression, Sunrise"
+    },
+    {
+      "name": "Pablo Picasso",
+      "color": "#F05E1C",
+      "most_important_piece": "Les Demoiselles d'Avignon"
+    },
+    {
+      "name": "Salvador Dalí",
+      "color": "#B174B2",
+      "most_important_piece": "The Persistence of Memory"
+    },
+    {
+      "name": "Frida Kahlo",
+      "color": "#C13D53",
+      "most_important_piece": "The Two Fridas"
+    },
+    {
+      "name": "Jackson Pollock",
+      "color": "#5E6062",
+      "most_important_piece": "No. 5, 1948"
+    },
+    {
+      "name": "Andy Warhol",
+      "color": "#E63359",
+      "most_important_piece": "Marilyn Diptych"
+    },
+    {
+      "name": "Johannes Vermeer",
+      "color": "#597AB7",
+      "most_important_piece": "Girl with a Pearl Earring"
+    },
+    {
+      "name": "Michelangelo",
+      "color": "#9E9A87",
+      "most_important_piece": "David"
+    }
+  ]
