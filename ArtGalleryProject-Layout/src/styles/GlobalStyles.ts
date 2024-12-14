@@ -36,3 +36,17 @@ export const MenuRight = styled.div`
     }
   }
 `;
+
+export const ToasterContainer = styled.div<{ bgColor: string }>`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: ${({ bgColor }) => bgColor || "#fff"};
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: ${({ bgColor }) => (bgColor ? 1 : 0)};
+  transform: ${({ bgColor }) => (bgColor ? "translateY(0)" : "translateY(20px)")};
+`;

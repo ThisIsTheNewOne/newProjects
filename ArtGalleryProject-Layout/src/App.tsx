@@ -1,4 +1,5 @@
 import './App.css'
+import ArtistList from './components/ArtistList'
 import Menu from './components/Menu'
 
 const App = () => {
@@ -8,12 +9,9 @@ const App = () => {
        <div>
         <Menu />
         <div style={{ padding: '100px 20px' }}>
-          <h1>Scroll down to see the menu hide</h1>
-          <p>Keep scrolling to see it reappear when you scroll up!</p>
-          <div style={{ height: '2000px' }}>
-            <p>Content goes here...</p>
+          <h1>Artist List</h1>
+          <ArtistList />
           </div>
-        </div>
       </div>
     </>
   )
