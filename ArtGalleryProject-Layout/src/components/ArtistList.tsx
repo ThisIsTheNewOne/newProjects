@@ -9,15 +9,13 @@ const GridContainer = styled.div`
   grid-template-columns: repeat(20, 1fr); 
   grid-auto-rows: 10px; 
   gap: 10px; 
-  max-width: 1000px; 
+  max-width: 1650px; 
   margin: 0 auto; 
 `;
 
 const ArtistItem = styled.div<{ color: string; width: string; height: string }>`
-  grid-column: span ${({ width }) => Math.ceil(parseFloat(width) / 40)}; 
-  grid-row: span ${({ height }) => Math.ceil(parseFloat(height) / 20)}; 
-  /* width: ${({ width }) => width}; 
-  height: ${({ height }) => height}; */
+  grid-column: span ${({ width }) => Math.ceil(parseFloat(width) / 70)}; 
+  grid-row: span ${({ height }) => Math.ceil(parseFloat(height) / 15)}; 
   overflow: hidden; 
   transition: transform 0.3s ease;
   display: flex;
