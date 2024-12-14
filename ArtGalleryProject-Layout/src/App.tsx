@@ -11,7 +11,7 @@ const App = () => {
         <div style={{ padding: '100px 20px' }}>
           <h1>Art Gallary of A Museum</h1>
           <ArtistList />
-          </div>
+        </div>
       </div>
     </>
   )

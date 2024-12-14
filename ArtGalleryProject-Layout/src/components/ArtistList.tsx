@@ -5,15 +5,25 @@ import artistsList from "../data/images_of_artists.json"
 import Toaster from './ToasterContainer';
 
 const ArtistItem = styled.div<{ color: string }>`
+  width: 100px;
   margin: 10px 0;
   padding: 10px;
   cursor: pointer;
-  border-left: 5px solid ${({ color }) => color};
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: ${({ color }) => color};
     color: #fff;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 0%;
+    transition: transform 0.3s ease; 
+  }
+
+  &:hover img {
+    transform: translateY(-10px); 
   }
 `;
 
@@ -38,14 +48,11 @@ const ArtistList: React.FC = () => {
           onMouseEnter={() => setHoveredArtist(artist)}
           onMouseLeave={() => setHoveredArtist(null)}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img
+          <img
               src={artist.image}
               alt={artist.name}
-              style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+              style={{ width: '100px', height: '100px', borderRadius: '0%' }}
             />
-           {/* {artist.name} */}
-          </div>
         </ArtistItem>
       ))}
      <Toaster key={hoveredArtist?.name || 'toaster'} artist={hoveredArtist} />
