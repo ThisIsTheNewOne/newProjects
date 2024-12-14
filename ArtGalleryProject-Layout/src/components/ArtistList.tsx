@@ -4,15 +4,28 @@ import artists from "../data/artists.json"
 import artistsList from "../data/images_of_artists.json"
 import Toaster from './ToasterContainer';
 
-const ArtistItem = styled.div<{ color: string }>`
-  width: 100px;
-  margin: 10px 0;
-  padding: 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(20, 1fr); 
+  grid-auto-rows: 10px; 
+  gap: 10px; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+`;
+
+const ArtistItem = styled.div<{ color: string; width: string; height: string }>`
+  grid-column: span ${({ width }) => Math.ceil(parseFloat(width) / 40)}; 
+  grid-row: span ${({ height }) => Math.ceil(parseFloat(height) / 20)}; 
+  /* width: ${({ width }) => width}; 
+  height: ${({ height }) => height}; */
+  overflow: hidden; 
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
-    color: #fff;
+    transform: scale(1.05);
   }
 
   img {
@@ -23,7 +36,18 @@ const ArtistItem = styled.div<{ color: string }>`
   }
 
   &:hover img {
-    transform: translateY(-10px); 
+    transform: translateY(-5px); 
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+
+  &:hover img {
+    transform: translateY(-5px); 
   }
 `;
 
@@ -35,26 +59,31 @@ const ArtistList: React.FC = () => {
     return {
       ...artist,
       image: matchedArtist?.image || '', 
-      description: matchedArtist?.description || '' 
+      description: matchedArtist?.description || '',
+      width: artist.width || "150px",
+      height: artist.height || "150px"
     };
   });
 
   return (
     <div>
+      <GridContainer>
       {combinedArtists.map((artist) => (
         <ArtistItem
           key={artist.name}
           color={artist.color}
+          width={artist.width}
+          height={artist.height}
           onMouseEnter={() => setHoveredArtist(artist)}
           onMouseLeave={() => setHoveredArtist(null)}
         >
           <img
               src={artist.image}
               alt={artist.name}
-              style={{ width: '100px', height: '100px', borderRadius: '0%' }}
             />
         </ArtistItem>
       ))}
+      </GridContainer>
      <Toaster key={hoveredArtist?.name || 'toaster'} artist={hoveredArtist} />
     </div>
   );

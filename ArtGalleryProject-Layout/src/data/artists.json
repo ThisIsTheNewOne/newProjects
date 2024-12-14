@@ -1,52 +1,82 @@
 [
     {
+      "id": 1,
       "name": "Leonardo da Vinci",
       "color": "#A67B5B",
-      "most_important_piece": "Mona Lisa"
+      "most_important_piece": "Mona Lisa",
+      "width": "107.738px;",
+      "height": "49.9515px"
     },
     {
+      "id": 2,
       "name": "Vincent van Gogh",
       "color": "#F3C24D",
-      "most_important_piece": "Starry Night"
+      "most_important_piece": "Starry Night",
+      "width": "188.053px",
+      "height": "63.6637px;"
     },
     {
+      "id": 3,
       "name": "Claude Monet",
       "color": "#6BAFA7",
-      "most_important_piece": "Impression, Sunrise"
+      "most_important_piece": "Impression, Sunrise",
+      "width": "107.738px;",
+      "height": "156.711px"
     },
     {
+      "id": 4,
       "name": "Pablo Picasso",
       "color": "#F05E1C",
-      "most_important_piece": "Les Demoiselles d'Avignon"
+      "most_important_piece": "Les Demoiselles d'Avignon",
+      "width": "55.8281px;",
+      "height": "63.6637px;"
     },
     {
+      "id": 5,
       "name": "Salvador Dalí",
       "color": "#B174B2",
-      "most_important_piece": "The Persistence of Memory"
+      "most_important_piece": "The Persistence of Memory",
+      "width": "98.9235px",
+      "height": "114.595px;"
     },
     {
+      "id": 6,
       "name": "Frida Kahlo",
       "color": "#C13D53",
-      "most_important_piece": "The Two Fridas"
+      "most_important_piece": "The Two Fridas",
+      "width": "90.1086px;",
+      "height": "114.595px"
     },
     {
+      "id": 7,
       "name": "Jackson Pollock",
       "color": "#5E6062",
-      "most_important_piece": "No. 5, 1948"
+      "most_important_piece": "No. 5, 1948",
+      "width": "94.0263px",
+      "height": "70.5197px"
     },
     {
+      "id": 8,
       "name": "Andy Warhol",
       "color": "#E63359",
-      "most_important_piece": "Marilyn Diptych"
+      "most_important_piece": "Marilyn Diptych",
+      "width": "159.649px",
+      "height": "114.595px"
     },
     {
+      "id": 9,
       "name": "Johannes Vermeer",
       "color": "#597AB7",
-      "most_important_piece": "Girl with a Pearl Earring"
+      "most_important_piece": "Girl with a Pearl Earring",
+      "width": "129.286px",
+      "height": "177.279px"
     },
     {
+      "id": 10,
       "name": "Michelangelo",
       "color": "#9E9A87",
-      "most_important_piece": "David"
+      "most_important_piece": "David",
+      "width": "51.9104px",
+      "height": "57.787px"
     }
   ]
