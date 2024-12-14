@@ -39,14 +39,17 @@ export const MenuRight = styled.div`
 
 export const ToasterContainer = styled.div<{ bgColor: string }>`
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  height: 150px;
+  width: 300px;
+  bottom: 0; /* Stick to the bottom of the screen */
+  right: 0; /* Align to the right edge */
   background-color: ${({ bgColor }) => bgColor || "#fff"};
   color: #fff;
   padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease; /* Smooth slide and fade */
   opacity: ${({ bgColor }) => (bgColor ? 1 : 0)};
-  transform: ${({ bgColor }) => (bgColor ? "translateY(0)" : "translateY(20px)")};
+  transform: ${({ bgColor }) => (bgColor ? "translateY(0)" : "translateY(150%)")}; /* Start from below the screen */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;

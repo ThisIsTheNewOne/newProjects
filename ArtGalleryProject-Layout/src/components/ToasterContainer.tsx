@@ -9,10 +9,10 @@ const Toaster: React.FC<ToasterProps> = ({ artist }) => {
   return (
     <ToasterContainer bgColor={artist?.color || ""}>
       {artist && (
-        <>
+        <div>
           <strong>{artist.name}</strong>
           <p>{artist.most_important_piece}</p>
-        </>
+        </div>
       )}
     </ToasterContainer>
   );

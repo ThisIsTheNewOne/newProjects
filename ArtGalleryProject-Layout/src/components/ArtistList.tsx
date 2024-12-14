@@ -38,17 +38,17 @@ const ArtistList: React.FC = () => {
           onMouseEnter={() => setHoveredArtist(artist)}
           onMouseLeave={() => setHoveredArtist(null)}
         >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-               <img
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <img
               src={artist.image}
               alt={artist.name}
               style={{ width: '50px', height: '50px', borderRadius: '50%' }}
             />
-          {artist.name}
+           {/* {artist.name} */}
           </div>
         </ArtistItem>
       ))}
-      <Toaster artist={hoveredArtist} />
+     <Toaster key={hoveredArtist?.name || 'toaster'} artist={hoveredArtist} />
     </div>
   );
 };
