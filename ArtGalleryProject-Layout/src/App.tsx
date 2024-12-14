@@ -9,7 +9,7 @@ const App = () => {
        <div>
         <Menu />
         <div style={{ padding: '100px 20px' }}>
-          <h1>Artist List</h1>
+          <h1>Art Gallary of A Museum</h1>
           <ArtistList />
           </div>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import artists from "../data/artists.json"
+import artistsList from "../data/images_of_artists.json"
 import Toaster from './ToasterContainer';
 
 const ArtistItem = styled.div<{ color: string }>`
@@ -17,18 +18,34 @@ const ArtistItem = styled.div<{ color: string }>`
 `;
 
 const ArtistList: React.FC = () => {
-  const [hoveredArtist, setHoveredArtist] = useState<{ name: string; color: string; most_important_piece: string; } | null>(null);
+  const [hoveredArtist, setHoveredArtist] = useState<{ name: string; color: string; most_important_piece: string; image: string; } | null>(null);
+
+  const combinedArtists = artists.map((artist) => {
+    const matchedArtist = artistsList.find((item) => item.name === artist.name);
+    return {
+      ...artist,
+      image: matchedArtist?.image || '', 
+      description: matchedArtist?.description || '' 
+    };
+  });
 
   return (
     <div>
-      {artists.map((artist) => (
+      {combinedArtists.map((artist) => (
         <ArtistItem
           key={artist.name}
           color={artist.color}
           onMouseEnter={() => setHoveredArtist(artist)}
           onMouseLeave={() => setHoveredArtist(null)}
         >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+               <img
+              src={artist.image}
+              alt={artist.name}
+              style={{ width: '50px', height: '50px', borderRadius: '50%' }}
+            />
           {artist.name}
+          </div>
         </ArtistItem>
       ))}
       <Toaster artist={hoveredArtist} />
