@@ -10,8 +10,8 @@ const Heading = styled.h1`
   text-align: center; 
   letter-spacing: -8px;
   width: 100%;
-  height: 25vh;
-  line-height: 1.3;
+  /* height: 24vh; */
+  /* line-height: 1.3; */
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -25,6 +25,7 @@ const ContentWrapper = styled.div`
   top: 0;
   left: 0; 
   padding-left: 25px;
+  padding-top: 50px; 
 `;
 
 const App = () => {
